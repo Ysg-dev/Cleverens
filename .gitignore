@@ -1,0 +1,62 @@
+## .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+## Visual Studio
+.vs/
+*.dbmdl
+*.vcxproj.user
+*.csproj.user
+
+## Rider
+.idea/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## dotCover
+*.dotCover
+
+## NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+## Publish
+*.Publish.xml
+*.azurePubxml
+publish/
+
+## User secrets
+**/secrets.json
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Others
+*.tmp
+*.bak
+*.swp
+*.swo
+*.sln.docstates
