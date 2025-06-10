@@ -1,11 +1,17 @@
 ﻿using System.Text.RegularExpressions;
-using CleverensSoft.Models;
+using CleverensSoft3.Models;
 
-namespace CleverensSoft.Parsers
+namespace CleverensSoft3.Parsers
 {
-    public class Format1Parser : ILogParser
+    public class Format2Parser : ILogParser
     {
-        private readonly Regex regex = new(@"^(?<date>\d{2}\.\d{2}\.\d{4}) (?<time>\d{2}:\d{2}:\d{2}\.\d{3}) (?<level>\w+)\s+(?<message>.+)$");
+        private readonly Regex regex = new(@"^(?<date>\d{4}-\d{2}-\d{2}) (?<time>\d{2}:\d{2}:\d{2}\.\d+)\|\s*(?<level>\w+)\|\d+\|(?<method>[^|]+)\|\s*(?<message>.+)$");
+
+        private string ConvertDate(string input)
+        {
+           var p = input.Split('-');
+            return $"{p[2]}-{p[1]}-{p[0]}";    
+        }
 
         public LogEntry? TryParse(string line)
         {
@@ -17,15 +23,9 @@ namespace CleverensSoft.Parsers
                 Date = ConvertDate(match.Groups["date"].Value),
                 Time = match.Groups["time"].Value,
                 LogLevel = NormalizeLevel(match.Groups["level"].Value),
-                Method = "DEFAULT",
+                Method = match.Groups["method"].Value,
                 Message = match.Groups["message"].Value
             };
-        }
-
-        private string ConvertDate(string input)
-        {
-            var p = input.Split('.');
-            return $"{p[0]}-{p[1]}-{p[2]}";
         }
 
         private string NormalizeLevel(string level) => level.ToUpper() switch

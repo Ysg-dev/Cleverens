@@ -1,6 +1,6 @@
-﻿using CleverensSoft.Services;
+﻿using CleverensSoft3.Services;
 
-namespace CleverensSoft
+namespace CleverensSoft3
 {
     class Program
     {

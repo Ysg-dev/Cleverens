@@ -1,4 +1,4 @@
-using StringCompressionTask;
+using CleverensSoft1;
 
 class Program
 {

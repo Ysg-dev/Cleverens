@@ -1,4 +1,4 @@
-﻿namespace CleverensSoft.Models
+﻿namespace CleverensSoft3.Models
 {
     public class LogEntry
     {

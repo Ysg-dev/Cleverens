@@ -1,6 +1,6 @@
-﻿using CleverensSoft.Models;
+﻿using CleverensSoft2.Models;
 
-namespace CleverensSoft.Parsers
+namespace CleverensSoft2.Parsers
 {
     public interface ILogParser
     {

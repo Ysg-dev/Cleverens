@@ -1,7 +1,7 @@
-﻿using CleverensSoft.Models;
-using CleverensSoft.Parsers;
+﻿using CleverensSoft3.Models;
+using CleverensSoft3.Parsers;
 
-namespace CleverensSoft.Services
+namespace CleverensSoft3.Services
 {
     public class LogProcessor
     {

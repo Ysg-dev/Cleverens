@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace StringCompressionTask
+namespace CleverensSoft1
 {
     public class StringCompressor
     {
