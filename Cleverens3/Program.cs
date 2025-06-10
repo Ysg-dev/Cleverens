@@ -8,9 +8,12 @@ namespace CleverensSoft
         {
             var processor = new LogProcessor();
 
-            string input = "input.txt";
-            string output = "standardized.txt";
-            string problems = "problems.txt";
+            string projectRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", ".."));
+
+            string input = Path.Combine(projectRoot, "input.txt");
+            string output = Path.Combine(projectRoot, "standardized.txt");
+            string problems = Path.Combine(projectRoot, "problems.txt");
+
 
             processor.ProcessFile(input, output, problems);
 
